@@ -87,6 +87,7 @@ public class ChallengeAlgoritmos {
     }
 
     public static void ej2(){
+        limpiarBuff();
         System.out.println("Ingrese su contraseña: ");
         String val = sc.nextLine(); int i=0;
         while(i<3){
@@ -104,6 +105,7 @@ public class ChallengeAlgoritmos {
     }
 
     public static void ej3(){
+        limpiarBuff();
         float val; int ant, cantH; String nombre;
         System.out.println("Ingrese su nombre y apellido: ");    nombre = sc.nextLine();
         System.out.println("Ingrese el valor por hora de trabajo: ");   val = sc.nextFloat();
@@ -125,7 +127,7 @@ public class ChallengeAlgoritmos {
             //System.out.println(rand);
             System.out.println("Adivine el numero comprendido entre 0 y 1000: ");
             int rta = sc.nextInt();
-            if(rta <0 || rta>100){ System.out.println("Ingreso un numero fuera del rango,terminando programa");System.exit(0);}
+            if(rta <0 || rta>1000){ System.out.println("Ingreso un numero fuera del rango,terminando programa");System.exit(0);}
             if(rta > rand){
                 System.out.println("Es mayor");
             }
@@ -150,6 +152,7 @@ public class ChallengeAlgoritmos {
         System.out.println("El menor numero Ingresado es: " + elMenor(lista));
         System.out.println("El mayor numero Ingresado es: " + elMayor(lista));
         System.out.println("El total de la suma de todos los numeros es de: " + sumaDetodos(lista));
+        System.out.println("El total de la suma de todos los numeros pares es de: " + sumaDePares(lista));
     }
 
 
@@ -182,9 +185,23 @@ public class ChallengeAlgoritmos {
         return total;
     }
 
+    public static int sumaDePares(List<Integer> arr){
+        int total = 0;
+        for(Integer a : arr) {
+            if(a % 2 == 0) {
+                total += a;
+            }
+        }
+        return total;
+    }
+
     public static void terminarEjecucion(){
         System.out.println("Presione una tecla para continuar...");
         String rta = sc.nextLine();
         System.exit(0);
+    }
+
+    public static void limpiarBuff(){
+        String srta = sc.nextLine();
     }
 }

@@ -10,7 +10,7 @@ public class MostrarChallenge {
     public static void menuPrincipal(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Bienvenido al Sistema de Exposicion de Challenge");
-        char rsa = 's';
+        char rsa;
         do{
             System.out.println("Que Challenge desea ejecutar?" +
                     "\n1.Challenge Algoritmos" +

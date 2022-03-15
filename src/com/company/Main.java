@@ -1,12 +1,10 @@
 package com.company;
 
-import static com.company.ChallengeAlgoritmos.ChallengeAlgoritmos.*;
-import static com.company.ChallengePoo.ChallengePoo.*;
+import static com.company.MostrarChallenge.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        ejecutarChallengeAlgoritmos();
-        ejecutarChallengePoo();
+       menuPrincipal();
     }
 }
